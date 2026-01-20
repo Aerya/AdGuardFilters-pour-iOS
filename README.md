@@ -1,6 +1,7 @@
 # Générateur de Liste AdGuard Combinée
 
 Ce projet génère automatiquement une liste de blocage AdGuard unique en combinant plusieurs listes populaires. Elle est mise à jour toutes les 24 heures via GitHub Actions.
+Créé pour ajouter mes règles sur iOS via une seule URL.
 
 ## Comment l'utiliser
 
