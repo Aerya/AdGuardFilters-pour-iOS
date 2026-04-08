@@ -40,10 +40,10 @@ jobs:
       run: |
         RULE_COUNT=$(grep -c "^[^!#]" blocklist.txt || true)
         DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
+        NOTES=$(printf "**Règles actives :** %s\nGénérée automatiquement le %s." "$RULE_COUNT" "$DATE")
         gh release create latest-blocklist blocklist.txt \
           --title "Blocklist — $DATE" \
-          --notes "**Règles actives :** $RULE_COUNT
-Générée automatiquement le $DATE." \
+          --notes "$NOTES" \
           --latest \
           --target main
       env:
