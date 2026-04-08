@@ -11,7 +11,7 @@ permissions:
 jobs:
   update-list:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -28,9 +28,35 @@ jobs:
 
     - name: Run update script
       run: python update_list.py
-      
-    - name: Commit and push changes
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "Mise à jour automatique de la blocklist"
-        file_pattern: blocklist.txt
+
+    - name: Delete previous release
+      run: |
+        gh release delete latest-blocklist --yes || true
+        git push --delete origin latest-blocklist || true
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create new release and upload blocklist
+      run: |
+        RULE_COUNT=$(grep -c "^[^!#]" blocklist.txt || true)
+        DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
+        gh release create latest-blocklist blocklist.txt \
+          --title "Blocklist — $DATE" \
+          --notes "**Règles actives :** $RULE_COUNT
+Générée automatiquement le $DATE." \
+          --latest \
+          --target main
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update stats file and commit
+      run: |
+        RULE_COUNT=$(grep -c "^[^!#]" blocklist.txt || true)
+        DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+        echo "Dernière mise à jour : $DATE" > stats.txt
+        echo "Nombre de règles : $RULE_COUNT" >> stats.txt
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add stats.txt
+        git diff --cached --quiet || git commit -m "Mise à jour automatique des stats ($RULE_COUNT règles)"
+        git push
