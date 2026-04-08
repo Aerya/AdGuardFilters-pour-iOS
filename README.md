@@ -8,11 +8,9 @@ Ceci afin d'ajouter mes règles sur iOS via une seule URL.
 ### URL de la liste pour AdGuard
 `https://raw.githubusercontent.com/Aerya/AdGuardFilters-pour-iOS/refs/heads/main/custom_rules.txt`
 
-### Ajouter vos propres règles
-Vous pouvez ajouter vos règles personnelles dans le fichier `custom_rules.txt` à la racine du dépôt. Ces règles seront incluses lors de la prochaine mise à jour.
-
 ### Modifier les sources
 Le fichier `sources.json` contient la liste de toutes les URLs sources utilisées. Vous pouvez faire une PR ou forker le projet pour en ajouter ou en supprimer.
+De même pour des règles personnelles dans le fichier `custom_rules.txt` à la racine du dépôt.
 
 ## Fonctionnement
 Un script Python (`update_list.py`) :
