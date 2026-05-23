@@ -34,7 +34,7 @@ jobs:
         gh release delete latest-blocklist --yes || true
         git push --delete origin latest-blocklist || true
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ github.token }}
 
     - name: Create new release and upload blocklist
       run: |
@@ -47,7 +47,7 @@ jobs:
           --latest \
           --target main
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ github.token }}
 
     - name: Update stats file and commit
       run: |
