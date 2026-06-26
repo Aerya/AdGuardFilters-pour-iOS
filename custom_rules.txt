@@ -992,4 +992,10 @@
 @@||expressvpn.com^$important
 @@||purstream.wiki^$important
 @@||max-streams.gleeze.com^$important
+@@||github.com^$important
+@@||help.bright-sdk.com^$important
+@@||bright-sdk.com^$important
+@@||vpncdn.protonweb.com^$important
+@@||www.123hp.com^$important
+@@||123hp.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
