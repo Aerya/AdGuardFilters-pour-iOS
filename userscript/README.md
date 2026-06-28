@@ -33,13 +33,14 @@ Navigateur (journal AGH)
 
 ### 2. Côté navigateur
 
-- Installer le userscript `userscript/adgh-provenance.user.js` dans
-  Tampermonkey/Violentmonkey.
-- Vérifier dans le bloc `CONFIG` :
-  - `BASE_URL` → l'URL Pages (par défaut `https://aerya.github.io/AdGuardFilters-pour-iOS/`).
-  - `@match` (en-tête) → l'URL de ton AGH (par défaut `http://192.168.0.64/*`).
-- Ouvrir le **journal des requêtes** d'AGH, filtre « Bloqué ». Les lignes dont le
-  domaine est dans l'index reçoivent un badge `sources : …`.
+- Installer en un clic (Tampermonkey/Violentmonkey requis), avec mises à jour
+  automatiques : **[adgh-provenance.user.js](https://raw.githubusercontent.com/Aerya/AdGuardFilters-pour-iOS/main/userscript/adgh-provenance.user.js)**.
+- **Adresse de ton AGH** : le script vise `http://192.168.0.64` par défaut. Pour une
+  autre adresse, ne modifie pas la source (l'auto-update l'écraserait) — ajoute ton URL
+  dans Tampermonkey : script → onglet *Réglages* → *Inclusions utilisateur*.
+- Optionnel, dans le bloc `CONFIG` : `MODE` (`'tooltip'` défaut, `'badge'`, `'both'`),
+  `BASE_URL` (défaut `https://aerya.github.io/AdGuardFilters-pour-iOS/`).
+- Ouvrir le **journal des requêtes** d'AGH, filtre « Bloqué », survoler un domaine bloqué.
 
 ## Tester avant de partager le userscript
 
