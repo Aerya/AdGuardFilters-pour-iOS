@@ -51,21 +51,21 @@ non la liste d'origine de la règle.
 **La solution.** Le build génère en parallèle un **index de provenance par domaine**,
 publié sur **GitHub Pages**. Un **userscript** (Tampermonkey/Violentmonkey) annote alors
 le journal d'AGH : au survol d'un domaine bloqué, il affiche **toutes les listes sources**
-qui le bloquent (y compris via une règle parente). Tu gardes une seule liste légère dans
-AGH **et** tu retrouves la provenance à la demande.
+qui le bloquent (y compris via une règle parente). Vous gardez une seule liste légère dans
+AGH **et** vous retrouvez la provenance à la demande.
 
 ![Tooltip de provenance dans le journal d'AdGuard Home](userscript/screenshot.png)
 
 ### Installation
 
-1. Garde une **seule** liste dans AGH : l'URL de release ci-dessus.
-2. Avec **Tampermonkey** ou **Violentmonkey** installé, clique pour installer (et bénéficier
+1. Gardez une **seule** liste dans AGH : l'URL de release ci-dessus.
+2. Avec **Tampermonkey** ou **Violentmonkey** installé, cliquez pour installer (et bénéficier
    des mises à jour automatiques) :
    **[adgh-provenance.user.js](https://raw.githubusercontent.com/Aerya/AdGuardFilters-pour-iOS/main/userscript/adgh-provenance.user.js)**.
-3. **Adapte l'adresse de ton AGH** : le script vise `http://192.168.0.64` par défaut.
-   Pour une autre adresse, ne modifie pas la source (l'auto-update l'écraserait) — ajoute
-   ton URL dans Tampermonkey (script → onglet *Réglages* → *Inclusions utilisateur*).
-4. Ouvre le **journal des requêtes**, survole un domaine bloqué → les sources s'affichent.
+3. **Adaptez l'adresse de votre AGH** : le script vise `http://192.168.0.64` par défaut.
+   Pour une autre adresse, ne modifiez pas la source (l'auto-update l'écraserait) — ajoutez
+   votre URL dans Tampermonkey (script → onglet *Réglages* → *Inclusions utilisateur*).
+4. Ouvrez le **journal des requêtes**, survolez un domaine bloqué → les sources s'affichent.
 
 Détails et dépannage : [`userscript/README.md`](userscript/README.md).
 
@@ -82,7 +82,7 @@ Navigateur :
   userscript -> fnv1a32(domaine) -> shards/<n>.json (Pages) -> badge « sources : … »
 ```
 
-Tu n'héberges rien et ne lances aucun script : tout est produit par le workflow
+Vous n'hébergez rien et ne lancez aucun script : tout est produit par le workflow
 `update.yml`. Côté usage, il n'y a qu'un **userscript à installer**.
 
 ### Format de l'index
