@@ -4,6 +4,8 @@ Affiche, pour chaque domaine bloqué dans le journal d'AdGuard Home, la ou les
 **listes sources d'origine**, en interrogeant l'index de provenance (shards JSON
 servis par GitHub Pages).
 
+![Tooltip de provenance dans le journal d'AdGuard Home](screenshot.png)
+
 > Utile uniquement si ton AGH charge la **liste unifiée** de ce dépôt : les
 > shards traduisent *les règles de cette liste* → *leurs sources amont*.
 
