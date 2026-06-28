@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AdGuard Home - Provenance des regles
 // @namespace    https://github.com/Aerya/AdGuardFilters-pour-iOS
-// @version      0.7.0
+// @version      0.7.1
 // @description  Affiche la/les liste(s) source(s) d'origine pour chaque domaine bloque dans le journal d'AdGuard Home, en interrogeant l'index de provenance (shards JSON).
 // @author       Aerya
 // @match        http://192.168.0.64/*
@@ -9,7 +9,16 @@
 // @grant        GM_xmlhttpRequest
 // @connect      aerya.github.io
 // @run-at       document-idle
+// @downloadURL  https://raw.githubusercontent.com/Aerya/AdGuardFilters-pour-iOS/main/userscript/adgh-provenance.user.js
+// @updateURL    https://raw.githubusercontent.com/Aerya/AdGuardFilters-pour-iOS/main/userscript/adgh-provenance.user.js
 // ==/UserScript==
+
+// >>> ADRESSE DE TON ADGUARD HOME <<<
+// Le @match/@include ci-dessus vise http://192.168.0.64.
+// Pour une AUTRE adresse, ne modifie PAS la source (l'auto-update l'ecraserait) :
+// dans Tampermonkey, ouvre ce script > onglet "Reglages" > "Inclusions
+// utilisateur", et ajoute l'URL de ton AGH (ex. http://192.168.1.10/*).
+// Ces inclusions personnelles survivent aux mises a jour.
 
 // -------------------------------------------------------------------------
 // CONFIGURATION

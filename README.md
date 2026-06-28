@@ -59,9 +59,13 @@ AGH **et** tu retrouves la provenance à la demande.
 ### Installation
 
 1. Garde une **seule** liste dans AGH : l'URL de release ci-dessus.
-2. Installe le userscript [`userscript/adgh-provenance.user.js`](userscript/adgh-provenance.user.js)
-   dans Tampermonkey/Violentmonkey, et ajuste l'en-tête `@match` à l'URL de ton AGH.
-3. Ouvre le **journal des requêtes**, survole un domaine bloqué → les sources s'affichent.
+2. Avec **Tampermonkey** ou **Violentmonkey** installé, clique pour installer (et bénéficier
+   des mises à jour automatiques) :
+   **[adgh-provenance.user.js](https://raw.githubusercontent.com/Aerya/AdGuardFilters-pour-iOS/main/userscript/adgh-provenance.user.js)**.
+3. **Adapte l'adresse de ton AGH** : le script vise `http://192.168.0.64` par défaut.
+   Pour une autre adresse, ne modifie pas la source (l'auto-update l'écraserait) — ajoute
+   ton URL dans Tampermonkey (script → onglet *Réglages* → *Inclusions utilisateur*).
+4. Ouvre le **journal des requêtes**, survole un domaine bloqué → les sources s'affichent.
 
 Détails et dépannage : [`userscript/README.md`](userscript/README.md).
 
