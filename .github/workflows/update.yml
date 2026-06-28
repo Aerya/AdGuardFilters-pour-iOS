@@ -7,10 +7,15 @@ on:
 
 permissions:
   contents: write
+  pages: write       # déploiement de l'index de provenance sur GitHub Pages
+  id-token: write    # requis par actions/deploy-pages
 
 jobs:
   update-list:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - name: Checkout repository
@@ -28,6 +33,12 @@ jobs:
 
     - name: Run update script
       run: python update_list.py
+
+    - name: Run provenance tests
+      run: python -m unittest discover -s tests
+
+    - name: Generate provenance shards
+      run: python make_shards.py   # provenance.db -> pages/ (index.json + shards/)
 
     - name: Delete previous release
       run: |
@@ -60,3 +71,17 @@ jobs:
         git add stats.txt
         git diff --cached --quiet || git commit -m "Mise à jour automatique des stats ($RULE_COUNT règles)"
         git push
+
+    # --- Publication de l'index de provenance sur GitHub Pages ---
+    # Prérequis (une seule fois) : Settings > Pages > Source = "GitHub Actions".
+    - name: Configure Pages
+      uses: actions/configure-pages@v5
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: pages
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
