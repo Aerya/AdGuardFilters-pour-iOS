@@ -1,0 +1,7 @@
+# Artefacts de build (jamais commités) :
+provenance.db   # base intermédiaire (rule -> sources)
+pages/          # index par domaine (shards) déployé sur GitHub Pages
+
+# Python
+__pycache__/
+*.pyc
