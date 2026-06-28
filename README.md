@@ -38,15 +38,32 @@ Un script Python (`update_list.py`) s'exécute automatiquement chaque jour via G
 
 Le fichier `stats.txt` à la racine du dépôt indique la date de la dernière mise à jour et le nombre de règles actives.
 
-## Retrouver la provenance d'un domaine bloqué
+## Retrouver la provenance d'un domaine bloqué (userscript)
 
-L'agrégation fait perdre la provenance : quand AdGuard Home bloque un domaine via la
-liste unifiée, il n'affiche que « la liste combinée », plus la source d'origine.
+**Pourquoi.** Charger 122 listes séparément dans AdGuard Home, c'est lourd à gérer et
+coûteux en performances. L'intérêt de ce dépôt est de n'abonner AGH qu'à **une seule
+liste agrégée** : gestion simplifiée, mises à jour par une seule URL, moteur allégé.
 
-Pour la retrouver, le build génère un **index de provenance par domaine** et le publie
-sur **GitHub Pages**. Un **userscript** (Tampermonkey/Violentmonkey) annote alors chaque
-ligne du journal d'AGH avec sa/ses liste(s) source(s) — voir
-[`userscript/`](userscript/README.md).
+**Le compromis.** Cette agrégation **fait perdre la provenance** : quand AGH bloque un
+domaine via la liste unifiée, son journal n'affiche plus que « All-In-One-Aerya », et
+non la liste d'origine de la règle.
+
+**La solution.** Le build génère en parallèle un **index de provenance par domaine**,
+publié sur **GitHub Pages**. Un **userscript** (Tampermonkey/Violentmonkey) annote alors
+le journal d'AGH : au survol d'un domaine bloqué, il affiche **toutes les listes sources**
+qui le bloquent (y compris via une règle parente). Tu gardes une seule liste légère dans
+AGH **et** tu retrouves la provenance à la demande.
+
+![Tooltip de provenance dans le journal d'AdGuard Home](userscript/screenshot.png)
+
+### Installation
+
+1. Garde une **seule** liste dans AGH : l'URL de release ci-dessus.
+2. Installe le userscript [`userscript/adgh-provenance.user.js`](userscript/adgh-provenance.user.js)
+   dans Tampermonkey/Violentmonkey, et ajuste l'en-tête `@match` à l'URL de ton AGH.
+3. Ouvre le **journal des requêtes**, survole un domaine bloqué → les sources s'affichent.
+
+Détails et dépannage : [`userscript/README.md`](userscript/README.md).
 
 ### Architecture
 
