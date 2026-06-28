@@ -6,7 +6,7 @@ servis par GitHub Pages).
 
 ![Tooltip de provenance dans le journal d'AdGuard Home](screenshot.png)
 
-> Utile uniquement si ton AGH charge la **liste unifiée** de ce dépôt : les
+> Utile uniquement si votre AGH charge la **liste unifiée** de ce dépôt : les
 > shards traduisent *les règles de cette liste* → *leurs sources amont*.
 
 ## Comment ça marche
@@ -19,7 +19,7 @@ Navigateur (journal AGH)
 
 - Le domaine est lu directement dans la ligne du journal (pas d'appel à l'API AGH).
 - Une seule petite requête par shard, mise en cache (RAM bornée + cache navigateur).
-- **Toi, tu n'héberges rien et tu ne lances aucun script** : les shards sont
+- **Vous n'hébergez rien et ne lancez aucun script** : les shards sont
   produits et publiés par le workflow `update.yml` (GitHub Actions), chaque jour.
 
 ## Mise en place
@@ -35,8 +35,8 @@ Navigateur (journal AGH)
 
 - Installer en un clic (Tampermonkey/Violentmonkey requis), avec mises à jour
   automatiques : **[adgh-provenance.user.js](https://raw.githubusercontent.com/Aerya/AdGuardFilters-pour-iOS/main/userscript/adgh-provenance.user.js)**.
-- **Adresse de ton AGH** : le script vise `http://192.168.0.64` par défaut. Pour une
-  autre adresse, ne modifie pas la source (l'auto-update l'écraserait) — ajoute ton URL
+- **Adresse de votre AGH** : le script vise `http://192.168.0.64` par défaut. Pour une
+  autre adresse, ne modifiez pas la source (l'auto-update l'écraserait) — ajoutez votre URL
   dans Tampermonkey : script → onglet *Réglages* → *Inclusions utilisateur*.
 - Optionnel, dans le bloc `CONFIG` : `MODE` (`'tooltip'` défaut, `'badge'`, `'both'`),
   `BASE_URL` (défaut `https://aerya.github.io/AdGuardFilters-pour-iOS/`).
@@ -44,16 +44,16 @@ Navigateur (journal AGH)
 
 ## Tester avant de partager le userscript
 
-Le **userscript** n'a pas besoin d'être publié pour être testé : tu l'installes
+Le **userscript** n'a pas besoin d'être publié pour être testé : vous l'installez
 en local et il interroge la Pages (qui, elle, ne contient que des données
-publiques : domaine → nom de liste). Tu valides, puis tu décides de partager le
+publiques : domaine → nom de liste). Vous validez, puis vous décidez de partager le
 `.user.js` ou non.
 
 ### Si rien ne s'affiche
 
-Active `DEBUG: true` dans `CONFIG` et regarde la console (F12) :
-- « lignes trouvées : 0 » → le `ROW_SELECTOR` ne correspond pas au markup de ta
-  version d'AGH. Inspecte une ligne et ajuste `ROW_SELECTOR`.
+Activez `DEBUG: true` dans `CONFIG` et regardez la console (F12) :
+- « lignes trouvées : 0 » → le `ROW_SELECTOR` ne correspond pas au markup de votre
+  version d'AGH. Inspectez une ligne et ajustez `ROW_SELECTOR`.
 - « domaine … » mais pas de badge → domaine hors index (règle exotique : joker,
   regex, exception `@@`) ou shard 404.
 - Erreur réseau → `BASE_URL` injoignable ou `@connect` à élargir.
