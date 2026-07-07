@@ -11,24 +11,32 @@ PROVENANCE_DB = "provenance.db"
 
 
 def load_sources(file_path):
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
 def load_custom_rules(file_path):
     if not os.path.exists(file_path):
         return []
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         return [line.strip() for line in f if line.strip() and not line.strip().startswith(('!', '#'))]
 
 
-def fetch_list(url):
+def fetch_list(source):
+    if os.path.exists(source):
+        try:
+            with open(source, 'r', encoding='utf-8') as f:
+                return f.read().splitlines()
+        except OSError as e:
+            print(f"Erreur lors de la lecture de {source}: {e}")
+            return []
+
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(source, timeout=10)
         response.raise_for_status()
         return response.text.splitlines()
     except requests.RequestException as e:
-        print(f"Erreur lors du téléchargement de {url}: {e}")
+        print(f"Erreur lors du téléchargement de {source}: {e}")
         return []
 
 
@@ -92,7 +100,7 @@ def main():
     total_sources = len(sources)
     for i, source in enumerate(sources):
         url = source["url"]
-        print(f"[{i + 1}/{total_sources}] Téléchargement : {url}")
+        print(f"[{i + 1}/{total_sources}] Traitement : {url}")
         content = fetch_list(url)
         new_rules = process_rules(content)
         for rule in new_rules:
