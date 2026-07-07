@@ -118,5 +118,9 @@
   "https://badblock.celenity.dev/nintendo.txt",
   "https://raw.githubusercontent.com/stamparm/blackbook/master/blackbook.txt",
   "https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt",
-  "https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt"
+  "https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt",
+  {
+    "name": "BADBOX / PEACHPIT - C2 IoCs (HUMAN Security)",
+    "url": "badbox-peachpit-adguard.txt"
+  }
 ]

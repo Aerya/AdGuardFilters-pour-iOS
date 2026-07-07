@@ -20,15 +20,32 @@ https://github.com/Aerya/AdGuardFilters-pour-iOS/releases/latest/download/blockl
 
 ## Modifier les sources
 
-Le fichier `sources.json` contient la liste de toutes les URLs sources utilisées. Vous pouvez faire une PR ou forker le projet pour en ajouter ou en supprimer.
+Le fichier `sources.json` contient la liste de toutes les URLs sources utilisées, ainsi que les fichiers de listes locales suivis dans le dépôt. Vous pouvez faire une PR ou forker le projet pour en ajouter ou en supprimer.
 Pour des règles personnalisées, ajoutez-les dans `custom_rules.txt` à la racine du dépôt.
+
+## Liste BADBOX / PEACHPIT
+
+Le fichier `badbox-peachpit-adguard.txt` contient une liste de blocage DNS C2 BADBOX / PEACHPIT.
+
+Il s'agit d'un instantané statique créé le 7 juillet 2026, contenant 109 domaines C2 publiés par HUMAN Security dans l'annexe de son rapport BADBOX 2.0 de mars 2025. La liste inclut `flyermobi.com`, identifié par HUMAN comme une infrastructure PEACHPIT dans son rapport de 2023.
+
+### Limites
+
+Une liste DNS peut bloquer ces noms d'hôte connus, mais elle ne peut pas désinfecter un appareil infecté par BADBOX, détecter un futur domaine C2, ni empêcher un trafic envoyé directement vers une adresse IP.
+
+Pour un appareil correspondant au profil BADBOX connu, isolez-le sur un VLAN invité/IoT, ou déconnectez-le et remplacez-le.
+
+### Sources
+
+- HUMAN Security, rapport BADBOX 2.0 (mars 2025), « List of C2 Domains ».
+- HUMAN Security, rapport BADBOX et PEACHPIT (2023), identifiant `flyermobi.com` comme infrastructure C2 PEACHPIT.
 
 ## Fonctionnement
 
 Un script Python (`update_list.py`) s'exécute automatiquement chaque jour via GitHub Actions :
 
-1. Lit les URLs depuis `sources.json`,
-2. Télécharge chaque liste source,
+1. Lit les sources depuis `sources.json`,
+2. Télécharge chaque liste source distante ou lit chaque liste locale,
 3. Combine toutes les règles et supprime les doublons,
 4. Ajoute les règles personnalisées depuis `custom_rules.txt`,
 5. Génère le fichier `blocklist.txt`,
