@@ -1073,4 +1073,6 @@
 @@||feeds.feedburner.com^$important
 ||utiq-aws.net^
 /(^|\.)utiq\.[a-z0-9.-]+$/
+@@||paste.c-net.org^$important
+@@||comet.chekm8qc86503319.duckdns.org^$important
 # === FIN user_rules AdGuard Home (auto) ===
