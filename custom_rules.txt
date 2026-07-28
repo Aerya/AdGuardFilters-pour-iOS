@@ -1076,4 +1076,11 @@
 @@||paste.c-net.org^$important
 @@||comet.chekm8qc86503319.duckdns.org^$important
 @@||garbles7331.duckdns.org^$important
+@@||cometkazooka.airdns.org^$important
+@@||websocket.push.apple.com^$important
+@@||whoer.net^$important
+@@||2ip.io^$important
+@@||www.wetube.io^$important
+@@||wetube.io^$important
+@@||api.adblock-for-youtube.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
