@@ -1083,4 +1083,6 @@
 @@||www.wetube.io^$important
 @@||wetube.io^$important
 @@||api.adblock-for-youtube.com^$important
+@@||comet-chekm8qc86503319.duckdns.org^$important
+@@||meekycomet.duckdns.org^$important
 # === FIN user_rules AdGuard Home (auto) ===
