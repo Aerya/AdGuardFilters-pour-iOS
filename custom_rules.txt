@@ -1085,4 +1085,13 @@
 @@||api.adblock-for-youtube.com^$important
 @@||comet-chekm8qc86503319.duckdns.org^$important
 @@||meekycomet.duckdns.org^$important
+@@||comet.obby.ca^$important
+@@||l.lamontagne.fr^$important
+@@||tbcomet.my.to^$important
+@@||sams-vpshosting.dedyn.io^$important
+@@||lucy.obnoxious.lol^$important
+@@||deb.torproject.org^$important
+@@||torproject.org^$important
+@@||radar-flagman2-tipped.duckdns.org^$important
+@@||duckdns.org^$important
 # === FIN user_rules AdGuard Home (auto) ===
