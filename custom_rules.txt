@@ -1094,4 +1094,6 @@
 @@||torproject.org^$important
 @@||radar-flagman2-tipped.duckdns.org^$important
 @@||duckdns.org^$important
+@@||videofeed.digiteka.com^
+@@||www.ultimedia.com^
 # === FIN user_rules AdGuard Home (auto) ===
