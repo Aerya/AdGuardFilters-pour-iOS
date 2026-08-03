@@ -1096,4 +1096,5 @@
 @@||duckdns.org^$important
 @@||videofeed.digiteka.com^
 @@||www.ultimedia.com^
+@@||safing.io^$important
 # === FIN user_rules AdGuard Home (auto) ===
