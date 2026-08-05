@@ -1097,4 +1097,9 @@
 @@||videofeed.digiteka.com^
 @@||www.ultimedia.com^
 @@||safing.io^$important
+@@||t.paypal.com^$important
+@@||ct.ddc.paypal.com^$important
+@@||geo.ddc.paypal.com^$important
+@@||umami.upandclear.org^$important
+@@||umami.is^$important
 # === FIN user_rules AdGuard Home (auto) ===
