@@ -1102,4 +1102,7 @@
 @@||geo.ddc.paypal.com^$important
 @@||umami.upandclear.org^$important
 @@||umami.is^$important
+@@||megadb.net^$important
+@@||baxji222.airdns.org^$important
+@@||yggtorrent.org^$important
 # === FIN user_rules AdGuard Home (auto) ===
