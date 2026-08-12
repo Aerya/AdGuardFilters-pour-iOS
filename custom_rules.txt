@@ -1105,4 +1105,5 @@
 @@||megadb.net^$important
 @@||baxji222.airdns.org^$important
 @@||yggtorrent.org^$important
+@@||www.yougetsignal.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
