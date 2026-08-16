@@ -1106,4 +1106,7 @@
 @@||baxji222.airdns.org^$important
 @@||yggtorrent.org^$important
 @@||www.yougetsignal.com^$important
+@@||prod.otel.kaizen.nvidia.com^$important
+@@||gx-target-experiments-frontend-api.gx.nvidia.com^$important
+@@||bolt.dropbox.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
