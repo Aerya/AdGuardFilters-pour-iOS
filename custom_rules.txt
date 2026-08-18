@@ -1109,4 +1109,10 @@
 @@||prod.otel.kaizen.nvidia.com^$important
 @@||gx-target-experiments-frontend-api.gx.nvidia.com^$important
 @@||bolt.dropbox.com^$important
+@@||push.apple.com^$important
+@@||init.push.apple.com^$important
+@@||cl3.apple.com^$important
+@@||probe.icloud.com^$important
+@@||experiments.apple.com^$important
+@@||probe.icloud.com^$client='192.168.0.184'
 # === FIN user_rules AdGuard Home (auto) ===
