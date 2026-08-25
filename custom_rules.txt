@@ -1116,4 +1116,5 @@
 @@||experiments.apple.com^$important
 @@||probe.icloud.com^$client='192.168.0.184'
 @@||cdn.by.wonderpush.com^$important
+@@||mailing.serviceclients.leclerc^$important
 # === FIN user_rules AdGuard Home (auto) ===
