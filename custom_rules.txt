@@ -1117,4 +1117,7 @@
 @@||probe.icloud.com^$client='192.168.0.184'
 @@||cdn.by.wonderpush.com^$important
 @@||mailing.serviceclients.leclerc^$important
+@@||infinity-logo.ddns.net^$important
+@@||dkqyx.r.a.d.sendibm1.com^$important
+@@||twitter.now^$important
 # === FIN user_rules AdGuard Home (auto) ===
