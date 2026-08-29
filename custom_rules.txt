@@ -1120,4 +1120,5 @@
 @@||infinity-logo.ddns.net^$important
 @@||dkqyx.r.a.d.sendibm1.com^$important
 @@||twitter.now^$important
+@@||cntapiapp.prisasd.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
