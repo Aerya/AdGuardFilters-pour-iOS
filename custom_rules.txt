@@ -1125,4 +1125,7 @@
 @@||www.semrush.com^$important
 @@||filesharingtalk.com^$important
 @@||doh.dns.apple.com^$important
+@@||spot-pa.googleapis.com^$client='192.168.0.216'
+@@||userlocation.googleapis.com^$client='192.168.0.216'
+@@||findmydevice-pa.googleapis.com^$client='192.168.0.216'
 # === FIN user_rules AdGuard Home (auto) ===
