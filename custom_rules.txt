@@ -1128,4 +1128,5 @@
 @@||spot-pa.googleapis.com^$client='192.168.0.216'
 @@||userlocation.googleapis.com^$client='192.168.0.216'
 @@||findmydevice-pa.googleapis.com^$client='192.168.0.216'
+@@||ifconfig.me^$important
 # === FIN user_rules AdGuard Home (auto) ===
