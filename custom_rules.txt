@@ -1129,4 +1129,5 @@
 @@||userlocation.googleapis.com^$client='192.168.0.216'
 @@||findmydevice-pa.googleapis.com^$client='192.168.0.216'
 @@||ifconfig.me^$important
+@@||tracking.epicgames.com^$client='Gaming'
 # === FIN user_rules AdGuard Home (auto) ===
