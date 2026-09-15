@@ -1130,4 +1130,12 @@
 @@||findmydevice-pa.googleapis.com^$client='192.168.0.216'
 @@||ifconfig.me^$important
 @@||tracking.epicgames.com^$client='Gaming'
+@@||xhcdn.com^
+@@||img.doppiocdn.com^$important
+@@||video-nss-h.xhcdn.com^$important
+@@||thumb-v6.xhcdn.com^$important
+@@||static-nss.xhcdn.com^$important
+@@||ic-vrm-nss.xhcdn.com^$important
+@@||thumb-v2.xhcdn.com^$important
+@@||ic-vt-nss.xhcdn.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
