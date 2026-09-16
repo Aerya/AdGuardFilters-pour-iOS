@@ -1138,4 +1138,5 @@
 @@||ic-vrm-nss.xhcdn.com^$important
 @@||thumb-v2.xhcdn.com^$important
 @@||ic-vt-nss.xhcdn.com^$important
+@@||push.services.mozilla.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
