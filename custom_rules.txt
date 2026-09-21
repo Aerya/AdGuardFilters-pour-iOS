@@ -1147,4 +1147,5 @@
 @@||coppersurfer.tk^$important
 @@||tracker.farted.net^$important
 @@||geo.prod.do.dsp.mp.microsoft.com^$important
+@@||comet.crabdance.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
