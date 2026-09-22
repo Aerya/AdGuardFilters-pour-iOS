@@ -1148,4 +1148,13 @@
 @@||tracker.farted.net^$important
 @@||geo.prod.do.dsp.mp.microsoft.com^$important
 @@||comet.crabdance.com^$important
+@@||cxcs.microsoft.net^$important
+@@||client.wns.windows.com^$important
+||ads.youtube.com^$xmlhttprequest,redirect-rule=noop.txt,badfilter
+||ads.reddit.com^$xmlhttprequest,redirect-rule=noop.txt,badfilter
+||ads.pinterest.com^$xmlhttprequest,redirect-rule=noop.txt,badfilter
+||ads-api.twitter.com^$xmlhttprequest,redirect-rule=nooptext,domain=~twitter.com,badfilter
+||ads.facebook.com^$xmlhttprequest,redirect-rule=noop.txt,badfilter
+||media.fastclick.net^$xmlhttprequest,redirect-rule=noop.txt,badfilter
+||doubleclick.net^$xmlhttprequest,redirect-rule=noop.txt,badfilter
 # === FIN user_rules AdGuard Home (auto) ===
