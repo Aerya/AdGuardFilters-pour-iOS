@@ -1157,4 +1157,5 @@
 ||ads.facebook.com^$xmlhttprequest,redirect-rule=noop.txt,badfilter
 ||media.fastclick.net^$xmlhttprequest,redirect-rule=noop.txt,badfilter
 ||doubleclick.net^$xmlhttprequest,redirect-rule=noop.txt,badfilter
+@@||rsload.net^$important
 # === FIN user_rules AdGuard Home (auto) ===
