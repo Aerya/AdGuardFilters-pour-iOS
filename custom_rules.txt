@@ -1158,4 +1158,35 @@
 ||media.fastclick.net^$xmlhttprequest,redirect-rule=noop.txt,badfilter
 ||doubleclick.net^$xmlhttprequest,redirect-rule=noop.txt,badfilter
 @@||rsload.net^$important
+@@||truffled.lol^$important
+@@||triboo.top^$important
+! Shield Nuvio: local HTTPS through existing TP-Link forwarding; 20261024T154522Z
+||stremio-aiolists.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-aiolists.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-aiomanager.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-aiomanager.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-aiometadata.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-aiometadata.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-aiostreams.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-aiostreams.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-comet.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-comet.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-nexotv.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-nexotv.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-postersplus.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-postersplus.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-rss-catalog.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-rss-catalog.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-seerrcatalog.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-seerrcatalog.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-streamfusion.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-streamfusion.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-streamnzb.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-streamnzb.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-wastream.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-wastream.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-watchly.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-watchly.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
+||stremio-loostream.neaj.net^$dnsrewrite=NOERROR;A;192.168.1.2,client=192.168.1.59
+||stremio-loostream.neaj.net^$dnsrewrite=NOERROR;A;192.168.0.196,client=~192.168.1.59
 # === FIN user_rules AdGuard Home (auto) ===
