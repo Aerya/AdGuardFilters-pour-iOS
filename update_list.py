@@ -1,4 +1,5 @@
 import json
+import ipaddress
 import requests
 import os
 import re
@@ -17,8 +18,18 @@ def load_sources(file_path):
 
 
 def is_public_rule(rule):
-    """Les regles de routage DNS/client locales ne sont pas publiables."""
-    return not re.search(r"\$[^\s]*(?:dnsrewrite|client)=", rule, re.IGNORECASE)
+    """Ecarte le routage local, en conservant les reponses DNS de blocage."""
+    if re.search(r"\$[^\s]*client=", rule, re.IGNORECASE):
+        return False
+    match = re.search(r"\$[^\s]*dnsrewrite=([^,\s]+)", rule, re.IGNORECASE)
+    if not match:
+        return True
+    try:
+        address = ipaddress.ip_address(match.group(1).split(";")[-1])
+    except ValueError:
+        return True
+    networks = ("10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "fc00::/7", "fe80::/10")
+    return not any(address in ipaddress.ip_network(network) for network in networks)
 
 
 def load_custom_rules(file_path):

@@ -12,6 +12,10 @@ class PublicRulesTests(unittest.TestCase):
         self.assertEqual(process_rules(rules), set())
         self.assertTrue(all(not is_public_rule(rule) for rule in rules))
 
+    def test_dns_blocking_responses_are_preserved(self):
+        rules = {"||ads.example.org^$dnsrewrite=0.0.0.0", "||ads.example.org^$dnsrewrite=NOERROR;A;127.0.0.1", "||ads.example.org^$dnsrewrite=NXDOMAIN;;"}
+        self.assertEqual(process_rules(rules), rules)
+
     def test_public_blocking_and_exceptions_are_preserved(self):
         rules = {"||ads.example.org^", "@@||safe.example.org^$important", "||tracker.example.org^$third-party"}
         self.assertEqual(process_rules(rules), rules)
