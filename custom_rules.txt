@@ -1160,5 +1160,4 @@
 @@||rsload.net^$important
 @@||truffled.lol^$important
 @@||triboo.top^$important
-! Shield Nuvio: local HTTPS through existing TP-Link forwarding; 20261024T154522Z
 # === FIN user_rules AdGuard Home (auto) ===

@@ -1,6 +1,7 @@
 import json
 import requests
 import os
+import re
 from datetime import datetime
 
 import provenance as prov_index
@@ -13,6 +14,11 @@ PROVENANCE_DB = "provenance.db"
 def load_sources(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         return json.load(f)
+
+
+def is_public_rule(rule):
+    """Les regles de routage DNS/client locales ne sont pas publiables."""
+    return not re.search(r"\$[^\s]*(?:dnsrewrite|client)=", rule, re.IGNORECASE)
 
 
 def load_custom_rules(file_path):
@@ -48,6 +54,8 @@ def process_rules(rules):
         rule = rule.strip()
         # Ignorer les commentaires et lignes vides
         if not rule or rule.startswith(('!', '#')):
+            continue
+        if not is_public_rule(rule):
             continue
         processed_rules.add(rule)
 
@@ -91,6 +99,8 @@ def main():
     provenance = {}
 
     def add_rule(rule, source_id):
+        if not is_public_rule(rule):
+            return
         provenance[rule] = provenance.get(rule, 0) | (1 << source_id)
 
     # Les règles personnalisées en premier (comportement historique).
