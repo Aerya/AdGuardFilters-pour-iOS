@@ -918,7 +918,6 @@
 @@||pixel-static.spotify.com^$important
 @@||fls-na.amazon.com^$important
 @@||njal.la^$important
-@@||go.adie.org^$client='TP-Link_1'
 @@||messenger-apps.intercom.io^$important
 @@||downloads.intercomcdn.com^$important
 @@||static.intercomassets.com^$important
@@ -1114,7 +1113,6 @@
 @@||cl3.apple.com^$important
 @@||probe.icloud.com^$important
 @@||experiments.apple.com^$important
-@@||probe.icloud.com^$client='192.168.0.184'
 @@||cdn.by.wonderpush.com^$important
 @@||mailing.serviceclients.leclerc^$important
 @@||infinity-logo.ddns.net^$important
@@ -1125,11 +1123,7 @@
 @@||www.semrush.com^$important
 @@||filesharingtalk.com^$important
 @@||doh.dns.apple.com^$important
-@@||spot-pa.googleapis.com^$client='192.168.0.216'
-@@||userlocation.googleapis.com^$client='192.168.0.216'
-@@||findmydevice-pa.googleapis.com^$client='192.168.0.216'
 @@||ifconfig.me^$important
-@@||tracking.epicgames.com^$client='Gaming'
 @@||xhcdn.com^
 @@||img.doppiocdn.com^$important
 @@||video-nss-h.xhcdn.com^$important
@@ -1160,4 +1154,9 @@
 @@||rsload.net^$important
 @@||truffled.lol^$important
 @@||triboo.top^$important
+@@||dns.watch^$important
+@@||blog.uncensoreddns.org^$important
+@@||www.dns0.eu^$important
+@@||www.opendns.com^$important
+@@||release-assets.githubusercontent.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
