@@ -1160,4 +1160,6 @@
 @@||www.opendns.com^$important
 @@||release-assets.githubusercontent.com^$important
 @@||www.g2a.com^$important
+@@||cdn.commoninja.com^$important
+@@||dns.sb^$important
 # === FIN user_rules AdGuard Home (auto) ===
