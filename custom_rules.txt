@@ -1162,4 +1162,5 @@
 @@||www.g2a.com^$important
 @@||cdn.commoninja.com^$important
 @@||dns.sb^$important
+@@||hjfbhgd.r.tsp1-brevo.net^$important
 # === FIN user_rules AdGuard Home (auto) ===
