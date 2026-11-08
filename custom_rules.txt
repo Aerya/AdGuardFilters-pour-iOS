@@ -1163,4 +1163,7 @@
 @@||cdn.commoninja.com^$important
 @@||dns.sb^$important
 @@||hjfbhgd.r.tsp1-brevo.net^$important
+@@||tido.tido.tido.rickyaddons.dpdns.org^$important
+@@||deezer.rickyaddons.dpdns.org^$important
+@@||internetarchive.rickyaddons.dpdns.org^$important
 # === FIN user_rules AdGuard Home (auto) ===
