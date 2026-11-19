@@ -1169,4 +1169,12 @@
 @@||www.maxmind.com^$important
 @@||static.maxmind.com^$important
 @@||pwnforums.st^$important
+@@||ww1.empornium.ph^$important
+@@||jnn-pa.googleapis.com^$important
+@@||tracker2.astratorrent.cc^$important
+@@||tracker2.astratorrent.la^$important
+@@||docker.dragonflydb.io^$important
+@@||dragonflydb.docker.reo.dev^$important
+@@||tracking.ibt.uber.com^$important
+@@||click.uber.com^$important
 # === FIN user_rules AdGuard Home (auto) ===
